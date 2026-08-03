@@ -1,8 +1,8 @@
 class Landfall < Formula
   desc "Join a Landfall war room from your terminal"
   homepage "https://github.com/landfalls-ai/landfall-cli"
-  url "https://github.com/landfalls-ai/landfall-cli/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "c17424ba71353a73b2f9d4b72e537da2c2d4a12ae969ab559838edca26f6dfa0"
+  url "https://github.com/landfalls-ai/landfall-cli/archive/refs/tags/v0.1.1.tar.gz"
+  sha256 "e7fac805c85201a29ab4a1762db2aa209311b347514934c09cf07d354a4fc9cb"
   license "MIT"
 
   depends_on "node"
@@ -13,10 +13,6 @@ class Landfall < Formula
   end
 
   test do
-    # `landfall logout` is the safest smoke test available today: no network
-    # I/O, no hang waiting on stdin/MCP handshake, clears a (likely absent)
-    # cached session and exits 0. (v0.1.0 has no --help flag yet — see
-    # landfall-cli issue tracker / RELEASING.md for the planned v0.1.1 fix.)
-    system "#{bin}/landfall", "logout"
+    assert_match "Usage: landfall", shell_output("#{bin}/landfall --help")
   end
 end
