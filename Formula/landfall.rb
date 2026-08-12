@@ -1,8 +1,8 @@
 class Landfall < Formula
   desc "Join a Landfall war room from your terminal"
   homepage "https://github.com/landfalls-ai/landfall-cli"
-  url "https://github.com/landfalls-ai/landfall-cli/archive/refs/tags/v0.4.3.tar.gz"
-  sha256 "be2efccfe88161b312ff857b792434db2535e5fb51ee8b7b75c56679b7f465d2"
+  url "https://github.com/landfalls-ai/landfall-cli/archive/refs/tags/v0.5.0.tar.gz"
+  sha256 "6c771b1dfd098cd490003b1d529ef7f64e68f96b8db8a18be1ea71215fb83940"
   license "MIT"
 
   depends_on "node"
